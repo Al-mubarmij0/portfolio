@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --navy: #0b1f3a;
     --gold: #d4af37;
@@ -313,3 +317,63 @@ footer {
     margin-top: 1rem;
     color: var(--gold);
 }
+
+/* Animations */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stats Section */
+.stats {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.stats h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--navy);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.stat-box {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h3 {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.stat-box p {
+    font-size: 1rem;
+    color: var(--navy);
+    margin: 0;
+}
+
+
